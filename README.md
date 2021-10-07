@@ -1,4 +1,4 @@
-# Unity2020.3.18f1-README-Template
+# Shooting island
 
 ### Projektbeschreibung: 
 Einführung in / Zusammenfassung des Projektes. 
@@ -10,6 +10,7 @@ Einführung in / Zusammenfassung des Projektes.
 WebGL Referenzauflösung (960x600) 
 
 ### Visuelle Einblicke in das Projekt: 
+![Übung02](https://user-images.githubusercontent.com/91017666/136345141-e7e89a4e-49e5-430f-819d-019c12708be4.png)
 Screenshots (Konzept, Spielabschnitte), Video (< 100MB, < 3 min)
 
 ### Notwendiges für die Ausführung: 
@@ -33,4 +34,4 @@ Bitte hier nicht, ich kann nicht programmieren, sondern was wurde im Projekt von
 - [ ] Neptune
 - [ ] Comet Haley
 
-Copyright by you :)
+Copyright by Ondic
