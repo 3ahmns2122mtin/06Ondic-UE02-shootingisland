@@ -45,4 +45,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 5888433523741206231, guid: db963134798eb7d4184bf67e71652aee, type: 3}
   parentOfTargets: {fileID: 0}
-  won: 0
+  won: 1
+  scoreNew: 0

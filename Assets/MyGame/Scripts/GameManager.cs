@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject target;
     public GameObject parentOfTargets;
+    public GameObject objCounter;
 
+    private Text textCounter;
     public bool won;
-    public int score;
+    public int scoreNew;
 
     // Start is called before the first frame update
     void Start()
     {
+        textCounter = objCounter.GetComponent<Text>();
         won = false;
         InvokeRepeating("Spawn", 1f, 2f);
 
@@ -52,15 +56,16 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Mouse pressed");
         }
+
     }
-
-
     public void IncrementScore()
     {
-        score++;
-        Debug.Log("increment...." + score);
+        scoreNew++;
+        Debug.Log("increment...." + scoreNew);
+        textCounter.text = scoreNew.ToString();
 
-        if(score > 10)
+        //== / >= / <= / != / < / > sind Zuweisungsoperatoren
+        if(scoreNew >= 10)
         {
             won = true;
         }
