@@ -1,17 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    private const int maxHit = 10;
     public GameObject target;
     public GameObject parentOfTargets;
     public GameObject objCounter;
+    public GameObject wonObj;
+    public GameObject shootSound;
 
     private Text textCounter;
-    public bool won;
-    public int scoreNew;
+    private bool won;
+    private int scoreNew;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,7 @@ public class GameManager : MonoBehaviour
         textCounter = objCounter.GetComponent<Text>();
         won = false;
         InvokeRepeating("Spawn", 1f, 2f);
-
+        wonObj.SetActive(false);
     }
 
     // Spawn a Target at a random position within a specified x and y range.
@@ -46,6 +47,7 @@ public class GameManager : MonoBehaviour
         if(won == true)
         {
             CancelInvoke("Spawn");
+            wonObj.SetActive(true);
         }
         else
         {
@@ -55,6 +57,7 @@ public class GameManager : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
             Debug.Log("Mouse pressed");
+            shootSound.GetComponent<AudioSource>().Play();
         }
 
     }
@@ -65,7 +68,7 @@ public class GameManager : MonoBehaviour
         textCounter.text = scoreNew.ToString();
 
         //== / >= / <= / != / < / > sind Zuweisungsoperatoren
-        if(scoreNew >= 10)
+        if(scoreNew >= maxHit)
         {
             won = true;
         }

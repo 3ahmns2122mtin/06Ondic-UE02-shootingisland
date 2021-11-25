@@ -9,7 +9,7 @@ public class Target : MonoBehaviour
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
-        secToDestroy = 1;
+        secToDestroy = 2;
         Destroy(gameObject, secToDestroy);
     }
 
