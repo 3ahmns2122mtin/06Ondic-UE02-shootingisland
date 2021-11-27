@@ -13,6 +13,8 @@ WebGL Referenzauflösung (960x600)
 ### Visuelle Einblicke in das Projekt: 
 ![Übung02](https://user-images.githubusercontent.com/91017666/136345141-e7e89a4e-49e5-430f-819d-019c12708be4.png)
 Screenshots (Konzept, Spielabschnitte), Video (< 100MB, < 3 min)
+![Einschnitt](https://user-images.githubusercontent.com/91017666/143686625-e86f3a8a-acc5-4cb8-947d-fdb2a6bc0e8d.JPG)
+
 
 ### Notwendiges für die Ausführung: 
 z.B.: Installationsprozess, Schritt für Schritt Anweisung, spezielles Packages welches geladen werden muss, etc.  
@@ -57,10 +59,12 @@ Shotgun shooting sound
  - [x] In der Szene ein empty GameObject anlegen, umbenennen in GameManager und Reset ausführen.
  - [x] Im Scripts Ordner ein neues C# Script erstellen mit dem Namen GameManager.
  - [x] Das GameManager Script per Drag and Drop dem GameObject GameManager hinzufügen.
-- [ ] Mercury
-- [x] Venus
-- [x] Earth (Orbit/Moon)
-- [x] Mars
+ - [x] WebGL Build machen in docs Ordner von dem Projektstand 25.11 
+ - [x] docs Ordner auf GitHub laden
+ - [x] Eine funktionale Änderung einbauen (zusätzliches Audio, hit Bad Targets --> Decrement by 1, etc.) 
+ - [x] WebGL Build machen in docs Ordner 
+ - [x] docs Ordner auf GitHub laden
+
 
 ### Limitationen:
 Bitte hier nicht, ich kann nicht programmieren, sondern was wurde im Projekt von den Anforderungen nicht umgesetz. Wo waren die Probleme. 
