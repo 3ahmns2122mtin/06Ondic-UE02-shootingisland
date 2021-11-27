@@ -4,14 +4,19 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private const int maxHit = 10;
+    private const int minHit = 0;
     public GameObject target;
+    public GameObject badTarget;
     public GameObject parentOfTargets;
+    public GameObject parentOfBadTargets;
     public GameObject objCounter;
     public GameObject wonObj;
+    public GameObject lostObj;
     public GameObject shootSound;
 
     private Text textCounter;
     private bool won;
+    private bool lost;
     private int scoreNew;
 
     // Start is called before the first frame update
@@ -19,8 +24,11 @@ public class GameManager : MonoBehaviour
     {
         textCounter = objCounter.GetComponent<Text>();
         won = false;
+        lost = false;
         InvokeRepeating("Spawn", 1f, 2f);
         wonObj.SetActive(false);
+        lostObj.SetActive(false);
+        
     }
 
     // Spawn a Target at a random position within a specified x and y range.
@@ -31,14 +39,19 @@ public class GameManager : MonoBehaviour
     {
         float randomX = Random.Range(-420, 421);
         float randomY = Random.Range(-240, 241);
+        float BadrandomX = Random.Range(-325, 325);
+        float BadrandomY = Random.Range(-140, 141);
 
-        Vector2 random2DPosition = new Vector2(randomX, randomY);
+        Vector2 random2DPositionTarget = new Vector2(randomX, randomY);
+        Vector2 random2DPositionBadTarget = new Vector2(BadrandomX, BadrandomY);
 
         GameObject myTarget = Instantiate(target, parentOfTargets.transform);
-        myTarget.transform.localPosition = random2DPosition;
+        myTarget.transform.localPosition = random2DPositionTarget;
+        GameObject myBadTarget = Instantiate(badTarget, parentOfBadTargets.transform);
+        myBadTarget.transform.localPosition = random2DPositionBadTarget;
 
 
-        Debug.Log(random2DPosition);
+        Debug.Log(random2DPositionTarget);
     }
 
     // Update is called once per frame
@@ -49,9 +62,11 @@ public class GameManager : MonoBehaviour
             CancelInvoke("Spawn");
             wonObj.SetActive(true);
         }
-        else
+
+        if(lost == true)
         {
-            Debug.Log(won);
+            CancelInvoke("Spawn");
+            lostObj.SetActive(true);
         }
 
         if(Input.GetMouseButtonDown(0))
@@ -71,6 +86,19 @@ public class GameManager : MonoBehaviour
         if(scoreNew >= maxHit)
         {
             won = true;
+        }
+    }
+
+    public void DecrementScore()
+    {
+        scoreNew--;
+        Debug.Log("decrement...." + scoreNew);
+        textCounter.text = scoreNew.ToString();
+
+        //== / >= / <= / != / < / > sind Zuweisungsoperatoren
+        if (scoreNew <= minHit)
+        {
+            lost = true;
         }
     }
 }

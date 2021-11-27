@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Target : MonoBehaviour
+public class BadTarget : MonoBehaviour
 {
     [SerializeField] private int secToDestroy;
     private GameManager gameManager;
@@ -15,7 +15,7 @@ public class Target : MonoBehaviour
 
     private void OnMouseDown()
     {
-        gameManager.IncrementScore();
+        gameManager.DecrementScore();
         Destroy(gameObject);
     }
 
