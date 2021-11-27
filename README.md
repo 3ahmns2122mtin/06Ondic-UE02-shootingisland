@@ -19,6 +19,12 @@ z.B.: Installationsprozess, Schritt für Schritt Anweisung, spezielles Packages 
 
 ### Drittmaterial: 
 Falls verwendet Fonts, Sounds, Music, Graphics, Materials, Code etc. welches nicht von mir stammt muss hier referenziert werden. 
+![1511216217133](https://user-images.githubusercontent.com/91017666/143686311-9a2cfbe8-f6cb-40b8-a730-b17b8cec03f3.jpg)
+![d5bf468bc88fe2ccf0adb7915d6f0c8c](https://user-images.githubusercontent.com/91017666/143686321-153034c2-1772-475b-bc27-89f737a60f0b.png)
+![dsgshshwh](https://user-images.githubusercontent.com/91017666/143686324-ca41347a-14b4-482d-9bb1-02fadb23cf87.jpg)
+![sgwgwg](https://user-images.githubusercontent.com/91017666/143686327-55931150-754b-497a-90b0-070cfb91a284.png)
+![ss_97129db23116879c7e07329aff3f9146c4ad15b5 1920x1080](https://user-images.githubusercontent.com/91017666/143686329-180d3d49-91fd-4eec-b105-55c2b8a7127e.jpg)
+Shotgun shooting sound
 
 ### Anforderungsliste:  
 - [x] WebGL export/upload lauffähig/spielbar
