@@ -9,7 +9,7 @@ Einführung in / Zusammenfassung des Projektes.
 (Betriebsystem, Unity Version, Visual Studio Version, verwendete SDKs)
 
 ### Zielplattform: 
-WebGL Referenzauflösung (960x600) 
+WebGL Referenzauflösung (960x600). 
 
 ### Visuelle Einblicke in das Projekt: 
 ![Übung02](https://user-images.githubusercontent.com/91017666/136345141-e7e89a4e-49e5-430f-819d-019c12708be4.png)
